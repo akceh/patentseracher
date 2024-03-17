@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>chaymae</title>
+  </head>
+  <body>>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+{% for detail in detail_output %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Service de recherche d'informations sur les brevets</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+
+</ul>
+
+
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Plus d'information</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+      <th scope="row">image</th>
+      <td><div align="center">
+          <a href="C:\Users\Huawei MateBook D14\Desktop\S4\Big data\Patented-search-site-with-n-gram-search-engine-using-Kipris-data\Whoosh_django\django1\search\templates\images\bg02.jpg", width="500", height="500" style="border : 10 salmon" align="center"></a>
+      </td>
+
+    </tr>
+    <tr>
+      <th scope="row">Nom du brevet</th>
+      <td>{{detail.0}}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">IPC</th>
+      <td> {{detail.1}}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">demandeur</th>
+      <td colspan="2">{{detail.2}}</td>
+    </tr>
+  <tr>
+      <th scope="row">Numéro d'application</th>
+      <td colspan="2">{{detail.3}}</td>
+    </tr>
+  <tr>
+      <th scope="row">Date de la demande</th>
+      <td colspan="2">{{detail.4}}</td>
+    </tr>
+  <tr>
+      <th scope="row">Numéro d'enregistrement</th>
+      <td colspan="2">{{detail.5}}</td>
+    </tr>
+  <tr>
+      <th scope="row">Date d'inscription</th>
+      <td colspan="2">{{detail.6}}</td>
+    </tr>
+  <tr>
+      <th scope="row">numéro public</th>
+      <td colspan="2">{{detail.7}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Date de publication</th>
+      <td colspan="2">{{detail.8}}</td>
+    </tr>
+  <tr>
+      <th scope="row">adjoint</th>
+      <td colspan="2">{{detail.9}}</td>
+    </tr>
+  <tr>
+      <th scope="row">inventeur</th>
+      <td colspan="2">{{detail.10}}</td>
+    </tr>
+  <tr>
+      <th scope="row">explication</th>
+      <td colspan="2">{{detail.11}}</td>
+    </tr>
+  </tbody>
+
+</table>
+
+
+{% endfor %}
+
+</body>
+</html>
